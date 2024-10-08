@@ -21,8 +21,29 @@ document.getElementById('btn-donate-now').addEventListener('click', function(){
         const balance = document.getElementById('money-balance').innerText;
         const balanceNumber = parseFloat(balance);
 
+        if(inputDonateAmountNumber > balanceNumber){
+            alert('You have insufficient balance. Please enter a different amount');
+            return;
+        }
+
         const newBalance = balanceNumber - inputDonateAmountNumber;
-        document.getElementById('money-balance').innerText = newBalance;
+        document.getElementById('money-balance').innerText = newBalance.toFixed(2);
+
+
+        // transaction history 
+        const place = document.getElementById('donation-place').innerText;
+        const newDiv = document.createElement('div');
+        
+        newDiv.innerHTML = `
+        <div class="space-y-3 px-7 py-3 border-2 border-gray-400 rounded-2xl shadow-md lg:h-24 mb-6">
+        <h2 class="font-bold text-xl">${inputDonateAmountNumber} Taka Donated for ${place}</h2>
+        <p>Date: ${new Date().toString()}</p>
+        </div>
+        `;
+        console.log(newDiv);
+
+        document.getElementById('history-transaction').appendChild(newDiv);
+
     }
 
     else if(isNaN(inputDonateAmountNumber)){

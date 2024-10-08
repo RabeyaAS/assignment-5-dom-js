@@ -24,3 +24,17 @@ function onClickBlog(){
 function onClickHome(){
     location.href = 'home.html';
 }
+
+// function donationPurpose(id){
+//     document.getElementById('donation-place').classList.add('hidden');
+//     document.getElementById('donation-place2').classList.add('hidden');
+
+//     document.getElementById(id).classList.remove('hidden');
+
+// }
+
+// function donationPurpose(){
+//     document.getElementById('donation-transaction');
+// }
+
+

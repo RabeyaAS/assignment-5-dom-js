@@ -12,10 +12,8 @@ document.getElementById('btn-history').addEventListener('click', function(){
     showSection('history-container');
 })
 
-// document.getElementById('btn-blog').addEventListener('click', function(){
-//     onClickBlog();
+// document.getElementById('history-container').addEventListener('click', function(){
+//     donationPurpose();
 // })
 
-// document.getElementById('btn-home').addEventListener('click', function(){
-//     onClickHome();
-// })
+
