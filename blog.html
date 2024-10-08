@@ -4,13 +4,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Donation History</title>
+    <!-- CDN link -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.12/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300&display=swap" rel="stylesheet">
 </head>
-<body>
+<body class="lg:w-full border-2 border-green-700">
+    <header class="bg-[#fbefd6] px-8 pt-3 pb-8 mb-12">
+        <div class="navbar flex justify-between">
+            <div id="btn-home" class="navbar-start w-20">
+                <a onclick="onClickHome()" class="btn w-28 h-3 bg-[#B4F461] text-xl font-bold border-1 border-red-500">Home</a>
+            </div>
+
+            <div class="navbar-center border-2 border-gray-600">
+                <img src="assets/logo.png" alt="">
+                <a class="btn btn-ghost text-xl font-bold">Donate Bangladesh</a>
+            </div>
+
+            <div class="navbar-end w-40 space-x-2 border-2 border-pink-500">
+                <img src="assets/coin.png" alt="">
+                <p class="text-xl font-medium"><span id="money-balance">5500</span> BDT</p>
+            </div>
+        </div>
+    </header>
+
     <main>
         <section>
+            <h1>This is main sections</h1>
             <h1>This is a Blog</h1>
+            <p>Here should be about blogs</p>
         </section>
     </main>
     
+
+    <script src="js/donation.js"></script>
+    <script src="js/utilities.js"></script>
+    <script src="js/features.js"></script>
 </body>
 </html>

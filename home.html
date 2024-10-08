@@ -15,8 +15,8 @@
 <body class="lg:w-full border-2 border-green-700">
     <header class="bg-[#fbefd6] px-8 pt-3 pb-8 mb-12">
         <div class="navbar flex justify-between">
-            <div class="navbar-start w-20">
-                <a class="btn w-28 h-3 bg-[#B4F461] text-xl font-bold border-1 border-red-500">Blog</a>
+            <div id="btn-blog" class="navbar-start w-20">
+                <a onclick="onClickBlog()" class="btn w-28 h-3 bg-[#B4F461] text-xl font-bold border-1 border-red-500">Blog</a>
             </div>
 
             <div class="navbar-center border-2 border-gray-600">
@@ -31,7 +31,7 @@
         </div>
     </header>
 
-    <main class="lg:w-5/6 lg:mx-auto border-2 border-sky-600">
+    <main class="lg:w-5/6 lg:mx-auto mb-20 border-2 border-sky-600">
         <section class="mb-10">
             <div class="space-x-4 text-center">
                 <button id="btn-donation" class="btn btn-outline w-36 h-14 bg-[#B4F461] text-xl font-bold">Donation</button>
@@ -76,25 +76,30 @@
         </section>
 
 
-        <section id="history-container" class="hidden">
-            <div>
-                <div>
-                    <h3>This is the history container</h3>
+        <section id="history-container" class="hidden space-y-3">
+            <div tabindex="0" class="collapse collapse-arrow border-base-300 bg-base-200 border">
+                <div class="collapse-title text-xl font-medium">96500 Taka is Donated for famine-2024 at Feni, Bangladesh</div>
+                <div class="collapse-content">
+                  <p>tabindex="0" attribute is necessary to make the div focusable</p>
                 </div>
-
+            </div>
+            <div tabindex="0" class="collapse collapse-arrow border-base-300 bg-base-200 border">
+                <div class="collapse-title text-xl font-medium">6500 Taka is Donated for Flood Relief in Feni, Bangladesh</div>
+                <div class="collapse-content">
+                  <p>tabindex="0" attribute is necessary to make the div focusable</p>
+                </div>
+            </div>
+            <div tabindex="0" class="collapse collapse-arrow border-base-300 bg-base-200 border">
+                <div class="collapse-title text-xl font-medium">15500 Taka is Donated for Aid for Injured in the Quota Movement, Bangladesh</div>
+                <div class="collapse-content">
+                  <p>tabindex="0" attribute is necessary to make the div focusable</p>
+                </div>
             </div>
         </section>
-
-
-
-
-
-
-
     </main>
 
-    <footer>
-
+    <footer class="bg-[#fbefd6]">
+        <div class="h-24"></div>
     </footer>
 
 
