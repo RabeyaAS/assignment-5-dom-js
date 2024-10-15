@@ -12,9 +12,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300&display=swap" rel="stylesheet">
 </head>
-<body class="lg:w-full border-2 border-green-700">
-    <header class="bg-[#fbefd6] px-8 pt-3 pb-8 mb-12">
-        <div class="navbar flex justify-between">
+<body class="lg:w-full border-2 border-green-700 relative">
+    <header class="bg-[#fbefd6] pt-3 mb-12 sticky top-0 z-30">
+        <div class="navbar flex justify-between px-8">
             <div id="btn-blog" class="navbar-start w-20">
                 <a onclick="onClickBlog()" class="btn w-28 h-3 bg-[#B4F461] text-xl font-bold border-1 border-red-500">Blog</a>
             </div>
@@ -29,17 +29,18 @@
                 <p class="text-xl font-medium"><span id="money-balance">5500</span> BDT</p>
             </div>
         </div>
+
+        <!-- donation and history Buttons -->
+        <div class="mt-11 py-8 bg-white border-2 border-purple-500">
+            <div class=" space-x-4 text-center border-2 border-green-500">
+                <button id="btn-donation" class="btn btn-outline w-36 h-14 text-xl font-bold bg-[#B4F461]">Donation</button>
+                <button id="btn-history" class="btn btn-outline w-36 h-14 text-xl font-medium bg-slate-200">History</button>
+            </div>
+        </div>
     </header>
 
-    <main class="lg:w-5/6 lg:mx-auto mb-20 border-2 border-sky-600">
-        <section class="mb-10">
-            <div class="space-x-4 text-center">
-                <button id="btn-donation" class="btn btn-outline w-36 h-14 bg-[#B4F461] text-xl font-bold">Donation</button>
-                <button id="btn-history" class="btn btn-outline w-36 h-14 text-xl font-medium">History</button>
-            </div>
-        </section>
-
-        <section id="donation-container" class="hidden mb-7 space-y-5 border-2 border-fuchsia-500">
+    <main class="relative lg:w-5/6 lg:mx-auto mb-72 border-2 border-sky-600">
+        <section id="donation-container" class=" mb-7 space-y-5 border-2 border-fuchsia-500">
             <!-- card 1 -->
             <div class="border-4 border-yellow-400">
                 <div class="hero bg-gray-50 border-2 rounded-2xl p-4">
@@ -61,7 +62,24 @@
                         <div class="space-y-3">
                             <input id="input-donation-amount" type="text" placeholder="Writes Donation Amount" class="input input-bordered w-full" />
                             <br>
+                             <!-- Modal -->
                             <button id="btn-donate-now" class="btn btn-block bg-[#B4F461] text-xl font-bold">Donate Now</button>
+                            <dialog id="my_modal_1" class="modal">
+                              <div class="flex flex-col items-center space-y-4 modal-box">
+                                <h3 class="text-3xl font-bold">Congrats!</h3>
+                                <div>
+                                    <img src="assets/coin.png" alt="coin-image">
+                                </div>
+                                <p class="pt-2">You Have Donated for Humankind</p>
+                                <p class="font-bold text-xl">Successfully</p>
+                                <div class="modal-action">
+                                  <form method="dialog">
+                                    <button class="btn">Close confirmation</button>
+                                  </form>
+                                </div>
+                              </div>
+                            </dialog>
+                            <!-- end of modal -->
                         </div>
                       </div>
                     </div>
@@ -125,40 +143,16 @@
             </div>
         </section>
 
-
-        <section id="history-container" class="">
+        <!-- history container -->
+        <section id="history-container" class="hidden">
             <div id="history-transaction">
-                <!-- <h1 class="font-bold text-xl">
-                    5000 Taka Donated for, Donate for Flood at Noakhali, Bangladesh.
-                </h1>
-                <p>This is paragaraph</p> -->
+                
             </div>
-
-            <!-- <div tabindex="0" class="collapse collapse-arrow border-base-300 bg-base-200 border">
-                <div id="donation-transaction" class="collapse-title text-xl font-medium">96500 Taka is Donated for famine-2024 at Feni, Bangladesh</div>
-                <div class="collapse-content">
-                  <p>tabindex="0" attribute is necessary to make the div focusable</p>
-                </div>
-            </div>
-
-            <div tabindex="0" class="collapse collapse-arrow border-base-300 bg-base-200 border">
-                <div class="collapse-title text-xl font-medium">6500 Taka is Donated for Flood Relief in Feni, Bangladesh</div>
-                <div class="collapse-content">
-                  <p>tabindex="0" attribute is necessary to make the div focusable</p>
-                </div>
-            </div>
-
-            <div tabindex="0" class="collapse collapse-arrow border-base-300 bg-base-200 border">
-                <div class="collapse-title text-xl font-medium">15500 Taka is Donated for Aid for Injured in the Quota Movement, Bangladesh</div>
-                <div class="collapse-content">
-                  <p>tabindex="0" attribute is necessary to make the div focusable</p>
-                </div>
-            </div> -->
         </section>
     </main>
 
     <footer class="bg-[#fbefd6]">
-        <div class="h-24"></div>
+        <div class="h-28"></div>
     </footer>
 
 

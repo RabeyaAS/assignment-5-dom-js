@@ -1,35 +1,39 @@
-console.log('donation file added');
+// console.log('donation file added');
 
 document.getElementById('btn-donate-now').addEventListener('click', function(){
-    console.log('inside the btn donate now function');
 
     const inputDonateAmount = document.getElementById('input-donation-amount').value;
     const inputDonateAmountNumber = parseFloat(inputDonateAmount);
-    
-
-    if(inputDonateAmountNumber > 0){
+  
+    if(inputDonateAmountNumber >= 0){
         console.log('successful donation');
 
         const currentDonationAmount = document.getElementById('btn-current-donate-amount').innerText;
         const currentDonationNumber = parseFloat(currentDonationAmount);
 
-        const donationAdded = currentDonationNumber + inputDonateAmountNumber;
-
-        document.getElementById('btn-current-donate-amount').innerText = donationAdded;
-        
-        // taking away from balance
         const balance = document.getElementById('money-balance').innerText;
-        const balanceNumber = parseFloat(balance);
+        const balanceNumber = parseFloat(balance).toFixed(2);
 
         if(inputDonateAmountNumber > balanceNumber){
             alert('You have insufficient balance. Please enter a different amount');
             return;
         }
 
+        // adding the donation amount
+        const donationAdded = currentDonationNumber + inputDonateAmountNumber;
+
+        document.getElementById('btn-current-donate-amount').innerText = donationAdded.toFixed(2);
+        
+        
+        // taking away from balance
         const newBalance = balanceNumber - inputDonateAmountNumber;
         document.getElementById('money-balance').innerText = newBalance.toFixed(2);
 
+        alert('Congrats! Successful Donation!');
 
+        const showModal = document.getElementById('my_modal_1');
+        showModal.showModal();
+        
         // transaction history 
         const place = document.getElementById('donation-place').innerText;
         const newDiv = document.createElement('div');
@@ -52,10 +56,8 @@ document.getElementById('btn-donate-now').addEventListener('click', function(){
     }
 
     else{
-        alert('Donation Declined! Please try again.');
-  
-    }
-  
+        alert('Donation Declined! Please try again.');  
+    } 
 })
 
 
