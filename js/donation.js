@@ -40,7 +40,7 @@ document.getElementById('btn-donate-now').addEventListener('click', function(){
         newDiv.innerHTML = `
         <div class="space-y-3 px-7 py-5 border-2 border-[#rgba(17, 17, 17, 0.1)] rounded-2xl shadow-md lg:h-32 mb-6">
         <h2 class="font-bold text-xl">${inputDonateAmountNumber} Taka Donated for ${place}</h2>
-        <p class="bg-slate-50 px-5 py-2">Date: ${new Date().toString()}</p>
+        <p class="bg-slate-100 px-5 py-2">Date: ${new Date().toString()}</p>
         </div>
         `;
 
@@ -101,7 +101,7 @@ document.getElementById('btn-donate-now2').addEventListener('click', function(){
         newDiv.innerHTML = `
         <div class="space-y-3 px-7 py-5 border-2 border-[#rgba(17, 17, 17, 0.1)] rounded-2xl shadow-md lg:h-32 mb-6">
         <h2 class="font-bold text-xl">${inputDonateAmountNumber} Taka Donated for ${place}</h2>
-        <p class="bg-slate-50 px-5 py-2">Date: ${new Date().toString()}</p>
+        <p class="bg-slate-100 px-5 py-2">Date: ${new Date().toString()}</p>
         </div>
         `;
 
@@ -162,7 +162,7 @@ document.getElementById('btn-donate-now3').addEventListener('click', function(){
         newDiv.innerHTML = `
         <div class="space-y-3 px-7 py-5 border-2 border-[#rgba(17, 17, 17, 0.1)] rounded-2xl shadow-md lg:h-32 mb-6">
         <h2 class="font-bold text-xl">${inputDonateAmountNumber} Taka Donated for ${place}</h2>
-        <p class="bg-slate-50 px-5 py-2">Date: ${new Date().toString()}</p>
+        <p class="bg-slate-100 px-5 py-2">Date: ${new Date().toString()}</p>
         </div>
         `;
 
