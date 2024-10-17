@@ -10,8 +10,5 @@ document.getElementById('btn-history').addEventListener('click', function(){
     showSection('history-container');
 })
 
-// document.getElementById('history-container').addEventListener('click', function(){
-//     donationPurpose();
-// })
 
 

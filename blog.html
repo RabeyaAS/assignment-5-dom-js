@@ -31,15 +31,99 @@
         </div>
     </header>
 
-    <main>
-        <section>
-            <h1>This is main sections</h1>
-            <h1>This is a FAQs</h1>
-            <p>Here should be about FAQs</p>
+    <main class="lg:w-3/4 lg:mx-auto">
+        <section class="space-y-6 mb-12">
+            <h1 class="text-4xl font-semibold">Important FAQs</h1>
 
-            
+            <div class="collapse collapse-arrow bg-base-200">
+                <input type="radio" name="my-accordion-2" checked="checked" />
+                <div class="collapse-title text-xl font-medium">What is the Document Object Model (DOM)?</div>
+                    <div class="collapse-content">
+                        <p>The Document Object Model (DOM) connects web pages to scripts or programming languages by representing the structure of a document. The DOM represents a document as a tree structure. Each branch of the tree ends in a node, and each node contains objects.</p>
+                        <br>
+                        <p>With the Document Object Model, programmers can create and build documents, navigate their structure, and add, modify, or delete elements and content. Anything found in an HTML document can be accessed, changed, deleted, or added using the Document Object Model (DOM) methods.</p>
+                    </div>
+            </div>
+
+            <div class="collapse collapse-arrow bg-base-200">
+                <input type="radio" name="my-accordion-2" />
+                <div class="collapse-title text-xl font-medium">How do you select an element from the DOM?</div>
+                    <div class="collapse-content">
+                        <p>You can select an element by bringing the ID name, Class name, or by using query selector in Javascript. For example: to call a specific element you give an ID name and create a variable and use -
+                            <br><span class="text-blue-600">const anyName = document.getElementById() </span>
+                        <br>And in the brackets should be the unique name of the ID you have given within the double or single quotation marks.
+                        </p>
+
+                        <br>
+                        <p>And if it is only for one particular class then use -
+                            <br><span class="text-blue-600">const anyName = document.getElementByClassName()</span>
+                        </p>
+                        <br>
+                        
+                        <p>You can also get an element by its tag name using this method - <span class="text-blue-600">document.getElementByTagName()</span></p>
+                        <br>
+
+                        <p>As for query selector if it is for a class then you do -
+                            <br><span class="text-blue-600">const anyName = document.querySelectorAll('.className')</span> - here you use the class identifier sign.
+                        </p>
+                        <br>
+
+                        <p>And if it is for a query selector id then you use -
+                            <br><span class="text-blue-600">const anyName = document.querySelector('#idName') </span>- here you use id identifier sign with the name.
+                        </p>
+                        <br>
+                        <p>There are many different ways of selecting an element from the DOM, these are just a few from the many.</p>
+                    </div>
+            </div>
+
+            <div class="collapse collapse-arrow bg-base-200">
+                <input type="radio" name="my-accordion-2" />
+                <div class="collapse-title text-xl font-medium">What is event delegation in the context of the DOM , and why is it useful?</div>
+                    <div class="collapse-content">
+                        <p>Event delegation in the context of the DOM is a Javascript technique that uses propagation to handle events at a higher level in the DOM tree.</p>
+                        <br>
+                        <p>It is useful because it attaches a single event listener to a parent element instead of attaching it to each child element, it thereby improves the performance, simplifies event handling and supports dynamic elements.</p>
+                    </div>
+            </div>
+
+            <div class="collapse collapse-arrow bg-base-200">
+                <input type="radio" name="my-accordion-2" />
+                <div class="collapse-title text-xl font-medium">How do you manipulate an element's attributes and styles using the DOM?</div>
+                    <div class="collapse-content">
+                        <div>
+                            <p>You can manipulate an element's attribute using the DOM which is - <span class="text-blue-600">document.getElementById()</span> and <span class="text-blue-600">document.querySelector()</span> however these are methods used for single elements, and the <span class="text-blue-600">document.querySelector()</span> method is more robust as it can select an element on the page by any type of selector.</p>
+                            <br>
+                            <p>You can also use the <span class="text-blue-600">querySelectorAll()</span> method to grab all elements with the same class name and use <span class="text-blue-600">forEach()</span> to loop through them and apply changes to it. And it is also possible to access a specific element with <span class="text-blue-600">querySelectorAll()</span> the same way you would with an array by using bracket notation.</p>
+                        </div>
+
+                        <div class="divider"></div>
+
+                        <div id="changing">
+                            <p>One of the ways for manipulating an element's styles using the DOM, is by using the <span class="text-blue-600">setAttribute()</span> method, however this will replace all the existing inline styles from the element. That's why it is better to use the style attribute directly. 
+                            <br>For example: 
+                            <span class="text-blue-600">const a = document.querySelector('div');</span>
+                            
+                            <br>
+
+                            <span class="text-blue-600">a.<span class="text-red-600">style.</span><span class="text-fuchsia-600">border =</span><span class="text-green-600"> '2px solid blue'</span>;</span>
+                           
+                            <br>
+
+                            <span class="text-blue-600">a.<span class="text-red-600">style.</span><span class="text-fuchsia-600">backgroundColor = </span><span class="text-green-600">'gray';</span></span> </p>
+                            
+                            <br>
+                            <p>For better understanding different colors have been applied for this DOM manipulation example. Firstly, you set the style attribute (red color), followed by a dot, then you set the property name (purple color), and then again followed by a dot you then set the value (green color) within the single quotations.
+                            <br>
+                            Overall, attributes are values that contain additional information about HTML elements. They usually come in name/value pairs, may be essential depending on the element.</p>
+                        </div>
+                    </div>
+            </div>
         </section>
     </main>
+
+    <footer class="bg-[#fbefd6]">
+        <div class="h-24"></div>
+    </footer>
     
 
     <script src="js/donation.js"></script>

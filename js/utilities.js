@@ -32,5 +32,3 @@ function onClickBlog(){
 function onClickHome(){
     location.href = 'home.html';
 }
-
-
