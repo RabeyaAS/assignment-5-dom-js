@@ -1,4 +1,3 @@
-console.log('features file added');
 
 document.getElementById('btn-donation').addEventListener('click', function(){
     showBackgroundColor('btn-donation');
